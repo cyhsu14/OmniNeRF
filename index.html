@@ -3,7 +3,7 @@
 
 <style type="text/css">
 	body {
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-family: "Lato", "Lucida Grande", sans-serif; 
 		font-weight:300;
 		font-size:18px;
 		margin-left: auto;
@@ -118,7 +118,7 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
+	<title>OmniNeRF</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="Creative and Descriptive Paper Title." />
 	<meta property="og:description" content="Paper description." />
@@ -138,24 +138,34 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
+		<span style="font-size:36px">Moving in a 360 World: Synthesizing PanoramicParallaxes from a Single Panorama</span>
 		<table align=center width=600px>
 			<table align=center width=600px>
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:24px"><a href="https://cyhsu14.github.io/about/">Ching Yu Hsu</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:24px"><a href="https://sunset1995.github.io/">Cheng Sun</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:24px"><a href="https://htchen.github.io/">Hwann Tzong Chen</a></span>
 						</center>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td align=center>
+						<center>
+							<span style="font-size:24px"><a href="http://nthu-en.site.nthu.edu.tw/">National Tsing Hua University</a></span>
+						</center>
+
 					</td>
 				</tr>
 			</table>
@@ -168,7 +178,7 @@
 					</td>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+							<span style="font-size:24px"><a href=''>[Code(pyTorch)]</a></span><br>
 						</center>
 					</td>
 				</tr>
@@ -181,7 +191,7 @@
 			<tr>
 				<td width=260px>
 					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
+						<img class="round" style="width:500px" src="./resources/teaser.jpeg"/>
 					</center>
 				</td>
 			</tr>
@@ -201,14 +211,14 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				We present Omnidirectional Neural Radiance Fields (OmniNeRF), the first method to the application of parallax-enabled novel panoramic view synthesis. Recent works for novel view synthesis focus on perspective images with limited field-of-view and require sufficient pictures captured in a specific condition. Conversely, OmniNeRF can generate panorama images for unknown viewpoints given a single equirectangular image as training data. To this end, we propose to augment the single RGB-D panorama by projecting back and forth between a 3D world and different 2D panoramic coordinates at different virtual camera positions. By doing so, we are able to optimize an Omnidirectional Neural Radiance Field with visible pixels collecting from omnidirectional viewing angles at a fixed center for the estimation of new viewing angles from varying camera positions. As a result, the proposed OmniNeRF achieves convincing renderings of novel panoramic views that exhibit the parallax effect. We showcase the effectiveness of each of our proposals on both synthetic and real-world datasets.
 			</td>
 		</tr>
 	</table>
 	<br>
 
 	<hr>
-	<center><h1>Talk</h1></center>
+	<center><h1>Demo Video</h1></center>
 	<p align="center">
 		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
 	</p>
@@ -238,7 +248,7 @@
 		<tr>
 			<td align=center width=400px>
 				<center>
-					<td><img class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
+					<td><img class="round" style="width:450px" src="./resources/method.jpg"/></td>
 				</center>
 			</td>
 		</tr>
@@ -251,13 +261,6 @@
 				</td>
 			</tr>
 		</center>
-	</table>
-	<table align=center width=800px>
-		<br>
-		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
-			</center>
-		</span>
 	</table>
 	<br>
 	<hr>
@@ -293,7 +296,7 @@
 			<td width=400px>
 				<left>
 					<center><h1>Acknowledgements</h1></center>
-					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+					Template reference: <a href="">here</a>
 				</left>
 			</td>
 		</tr>
