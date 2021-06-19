@@ -1,5 +1,7 @@
 <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
 <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <style type="text/css">
 	body {
@@ -10,8 +12,17 @@
 		margin-right: auto;
 		width: 1100px;
 	}
-	
+	footer {
+		font-family: "Lato", "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:12px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+		color: rgba(0, 0, 0, 0.54);
+	}
 	h1 {
+		font-family: Source Serif Pro, sans-serif;
 		font-size:32px;
 		font-weight:300;
 	}
@@ -110,9 +121,9 @@
 	
 	hr
 	{
-		border: 0;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+		border: 2px solid #003153;
+    	margin: 50px 20px;
+		/* background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); */
 	}
 </style>
 
@@ -138,7 +149,7 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Moving in a 360 World: Synthesizing PanoramicParallaxes from a Single Panorama</span>
+		<span style="font-size:36px">Moving in a 360 World: Synthesizing Panoramic Parallaxes from a Single Panorama</span>
 		<table align=center width=600px>
 			<table align=center width=600px>
 				<tr>
@@ -196,13 +207,6 @@
 				</td>
 			</tr>
 		</table>
-		<table align=center width=850px>
-			<tr>
-				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
-				</td>
-			</tr>
-		</table>
 	</center>
 
 	<hr>
@@ -217,38 +221,45 @@
 	</table>
 	<br>
 
-	<hr>
-	<center><h1>Demo Video</h1></center>
-	<p align="center">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/CTSx8GwKT9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</p>
-
-	<table align=center width=800px>
-		<br>
+	<table align=center width=450px>
+		<center><h1>Paper</h1></center>
 		<tr>
-			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
-			</center>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td><span style="font-size:14pt"><br>
+				<b>Moving in a 360 World: Synthesizing Panoramic Parallaxes from a Single Panorama</b><br>
+				(hosted on <a href="">ArXiv</a>)<br>
+
+			</td>
 		</tr>
 	</table>
+	<br>
 	<hr>
-
-	<center><h1>Code</h1></center>
-
-	<table align=center width=420px>
-		<center>
-			<tr>
-				<td>
-				</td>
-			</tr>
-		</center>
+	<center><h1>Demo: Moving in a 360 world</h1></center>
+	<!-- <p align="center">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/CTSx8GwKT9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</p> -->
+	<table align=center width=850px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<td><img class="round" style="width:700px" src="./resources/scene1_pano.gif"/></td>
+				</center>
+			</td>
+			<td align=center width=400px>
+				<center>
+					<td><img class="round" style="width:700px" src="./resources/scene1_persp.gif"/></td>
+				</center>
+			</td>
+		</tr>
 	</table>
+
+	<center><h1>Applications: Novel view in Real World</h1></center>
+
 	<table align=center width=400px>
 		<tr>
 			<td align=center width=400px>
 				<center>
-					<td><img class="round" style="width:450px" src="./resources/method.jpg"/></td>
+					<td><img class="round" style="width:700px" src="./resources/multi-view.png"/></td>
 				</center>
 			</td>
 		</tr>
@@ -257,36 +268,20 @@
 		<center>
 			<tr>
 				<td>
-					Short description if wanted
+					Source image <I>I<sub>s</sub></I> is for training, and the target view <I>I<sub>t</sub></I> is the nearest neighbor of <I>I<sub>s</sub></I> in Matterport3D. The OmniNeRF generated panorama <I>I<sub>t</sub></I> by training on <I>I<sub>s</sub></I> and applying the same pose as <I>I<sub>t</sub></I>. Eventhough we are unable to reproduce the precise edges at far-ther regions, the overall quality is still convincing.
 				</td>
 			</tr>
 		</center>
 	</table>
 	<br>
-	<hr>
-	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
-		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
-				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
-				<span style="font-size:4pt"><a href=""><br></a>
-				</span>
-			</td>
-		</tr>
-	</table>
-	<br>
 
-	<table align=center width=600px>
+	<!-- <table align=center width=600px>
 		<tr>
 			<td><span style="font-size:14pt"><center>
 				<a href="./resources/bibtex.txt">[Bibtex]</a>
 			</center></td>
 		</tr>
-	</table>
+	</table> -->
 
 	<hr>
 	<br>
@@ -304,5 +299,8 @@
 
 <br>
 </body>
+<footer align=center>
+Copyright © <a href="https://github.com/cyhsu14">Ching-Yu Hsu</a> , Template © <a href="https://github.com/richzhang/webpage-template">richzhang</a> 2021.
+</footer>
 </html>
 
