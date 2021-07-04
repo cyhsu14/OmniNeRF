@@ -1,0 +1,19 @@
+# filtered out fake visible pixels
+expname = 03122_554516
+basedir = ./logs
+datadir = /home/jessie/datasets/st3d_rgbdxyz/nerf/03122_554516
+dataset_type = st3d
+
+N_rand = 1400
+N_samples = 64
+N_importance = 128
+
+use_viewdirs = True
+raw_noise_std = 1e0
+
+multires = 10
+multires_views = 4
+
+stage = 0
+use_gradient = True
+use_depth = False

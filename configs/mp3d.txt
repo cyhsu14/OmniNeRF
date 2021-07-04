@@ -1,0 +1,28 @@
+expname = 252b3d388cde465f8e28dbf66b0f9b15_xy_scale06_fix_wall
+basedir = ./logs
+datadir = /home/jessie/datasets/mp3d/252b3d388cde465f8e28dbf66b0f9b15_xy_scale06_fix
+
+
+dataset_type = st3d
+
+factor = 8
+llffhold = 8
+
+N_rand = 1400
+N_samples = 64
+N_importance = 128
+
+use_viewdirs = True
+raw_noise_std = 1e0
+
+sample_pixel = False
+
+multires = 10
+multires_views = 4
+
+stride = -1
+stage = 7
+#testsave_dir = /home/jessie/nerf-pytorch/logs/mp3d_test_1006/renderonly_train_path_099999
+
+use_depth = False
+use_gradient = True
