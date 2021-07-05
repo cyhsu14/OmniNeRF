@@ -1,7 +1,7 @@
 # filtered out fake visible pixels
 expname = 03122_554516
 basedir = ./logs
-datadir = /home/jessie/datasets/st3d_rgbdxyz/nerf/03122_554516
+datadir = ./data/03122_554516
 dataset_type = st3d
 
 N_rand = 1400
