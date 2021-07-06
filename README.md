@@ -19,7 +19,7 @@ See the notebook [Generate_data.ipynb]() for more details.
 
 ## Citation
 
-The original pytorch implementation of NeRF is helpful:
+The pytorch implementation of NeRF is helpful:
 ```
 @misc{lin2020nerfpytorch,
   title={NeRF-pytorch},
