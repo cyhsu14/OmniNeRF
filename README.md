@@ -1,4 +1,5 @@
 # OmniNeRF
+[Project page](https://cyhsu14.github.io/OmniNeRF/)
 
 ## Installation
 ```
@@ -15,7 +16,7 @@ python run_nerf.py --config configs/st3d.txt
 ```
 
 You could also generate data from your own panorama.
-See the notebook [Generate_data.ipynb]() for more details.
+See the notebook [Generate_data.ipynb](https://github.com/cyhsu14/OmniNeRF/blob/main/Generate_data.ipynb) for more details.
 
 ## Citation
 
