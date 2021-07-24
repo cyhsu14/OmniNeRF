@@ -496,7 +496,7 @@ def train():
             print('Done rendering', testsavedir)
             
             # calculate MSE and PSNR for last image(gt pose)
-            gt_loss = img2mse(torch.tensor(rgbs[-1]), torch.tensor(images[-1]))
+            gt_loss = img2mse(torch.tensor(rgbs[-1]), torch.tensor(rays_rgb_test[-1]))
             gt_psnr = mse2psnr(gt_loss)
             print('ground truth loss: {}, psnr: {}'.format(gt_loss, gt_psnr))
             with open(os.path.join(testsavedir, 'statistics.txt'), 'w') as f:
