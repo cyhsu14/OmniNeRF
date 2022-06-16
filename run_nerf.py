@@ -539,7 +539,7 @@ def train():
         batch_d = rays_d[i_batch:i_batch+N_rand]
         
         target_rgb = rays_rgb[i_batch:i_batch+N_rand]      
-        target_d = rays_d[i_batch:i_batch+N_rand]
+        target_depth = rays_depth[i_batch:i_batch+N_rand]
         target_g = rays_g[i_batch:i_batch+N_rand]
 
         i_batch += N_rand
@@ -563,7 +563,7 @@ def train():
         img_loss = img2mse(rgb, target_rgb)
         # depth_loss
         if args.use_depth:
-            depth_loss = torch.abs(dep - target_d).mean()
+            depth_loss = torch.abs(dep - target_depth).mean()
         else:
             depth_loss = torch.tensor(0.0)
             
@@ -580,7 +580,7 @@ def train():
             img_loss0 = img2mse(extras['rgb0'], target_rgb)
             loss = loss + img_loss0
             if args.use_depth:
-                depth_loss0 = torch.abs(extras['depth0'] - target_d).mean()
+                depth_loss0 = torch.abs(extras['depth0'] - target_depth).mean()
                 loss = loss + depth_loss0
             if args.use_gradient:
                 grad_loss0 = img2mse(extras['grad0'], target_g)
